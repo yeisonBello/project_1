@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topnav">
+
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a> |
+    <a href="LogoutServlet">Logout</a> |
+    <a href="ProfileServlet">Profile</a> |
+
+
+</div>
+
+<form action="SubmitRequest" method="get">
+    <div class="container">
+        <h1>Submit Request </h1>
+        <p>Please fill in this form to update your account.</p>
+        <hr>
+
+        <label for="psw"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" id="psw" required>
+
+
+        <label for="psw"><b>Enter Amount of Money</b></label>
+        <input type="text" placeholder="Enter Amount of Money"name="password" id="psw" required>
+
+        <label for="psw"><b>Enter Receipt_type (Hotel,Gasoline,Food,Travel Expenses,Housing)</b></label>
+        <input type="tect" placeholder="Enter Receipt_type" name="password" id="psw" required>
+        <hr>
+
+        <button type="submit" class="registerbtn">Save Changes </button>
+    </div>
+
+    <div class="container signin">
+
+    </div>
+</form>
+<div class="footer">
+    <p>Expense Reimbursement System - Enterprise</p>
+</div>
+
+</body>
+</html>

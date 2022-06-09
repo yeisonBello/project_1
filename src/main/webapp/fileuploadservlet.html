@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Upload</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="header">
+<h1>Revature Reimbursement</h1>
+<p>Expense Reimbursement System - Enterprise</p>
+</div>
+
+
+
+
+<div class="topnav">
+
+    <a href="index.html">Home</a>
+    <a href="login.html">Login</a> |
+    <a href="LogoutServlet">Logout</a> |
+    <a href="ProfileServlet">Profile</a> |
+
+
+</div>
+
+
+<!--<form method="post" action="fileuploadservlet" enctype="multipart/form-data">-->
+<!--    <input type="file" name="file" />-->
+<!--    <input type="submit" value="Upload" />-->
+<!--</form>-->
+<h3>Choose the receipt that you wish to upload!</h3>
+<!-- HTML5 Input Form Elements -->
+<input id="ajaxfile" type="file"/> <br/>
+<button onclick="uploadFile()"> Upload </button>
+
+<!-- Ajax to Java File Upload Logic -->
+<script>
+    async function uploadFile() {
+        let formData = new FormData();
+        formData.append("file", ajaxfile.files[0]);
+        await fetch('fileuploadservlet', {
+            method: "POST",
+            body: formData
+        });
+        alert('The file has been uploaded successfully');
+    }
+    </script>
+
+<div class="footer">
+    <p>Expense Reimbursement System - Enterprise</p>
+</div>
+</body>
+</html>
